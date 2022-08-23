@@ -9,10 +9,7 @@ on:
         type: string
 
 jobs:
-  deploy:
-    environment:
-      name: b
- 
+  deploy: 
     runs-on: ubuntu-latest
 
     steps:
