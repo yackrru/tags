@@ -2,6 +2,11 @@ name: Tagger for b
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: specify the value with format v*
+        required: true
+        type: string
 
 jobs:
   deploy:
