@@ -1,0 +1,15 @@
+name: CI for b
+
+on:
+  push:
+    tags: [ "b*" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a multi-line script
+        run: |
+          echo Create tag
