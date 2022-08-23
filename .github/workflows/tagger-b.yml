@@ -20,6 +20,6 @@ jobs:
 
       - name: Tagger
         run: |
-          tag_name="$(git branch --show-current)"
+          tag_name="$(git branch --show-current)"-"${{ inputs.version }}"
           git tag "$tag_name"
           git push origin "$tag_name"
