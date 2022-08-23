@@ -3,7 +3,7 @@ name: Release for b
 on:
   push:
     tags:
-      - 'b*'
+      - 'b-*'
 
 jobs:
   release:
