@@ -15,6 +15,6 @@ jobs:
 
       - name: Tagger
         run: |
-          branch_name="${GITHUB_REF#refs/heads/}"
-          git tag "$branch_name"
-          git push origin "$branch_name"
+          tag_name="$(git branch --show-current"
+          git tag "$tag_name"
+          git push origin "$tag_name"
