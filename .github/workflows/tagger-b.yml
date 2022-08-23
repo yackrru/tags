@@ -1,8 +1,7 @@
 name: Tagger for b
 
 on:
-  pull_request:
-    branches: [ "b-*" ]
+  workflow_dispatch:
 
 jobs:
   deploy:
