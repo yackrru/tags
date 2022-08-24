@@ -1,9 +1,11 @@
 name: Release for b
 
 on:
-  push:
-    tags:
-      - 'b-*'
+  workflow_run:
+    workflows:
+      - 'Tagger for b'
+    types:
+      - completed
 
 jobs:
   release:
