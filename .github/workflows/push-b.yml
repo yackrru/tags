@@ -1,0 +1,21 @@
+name: Push for b
+
+on:
+  push:
+    branches:
+      - 'b*'
+    paths:
+      - 'dir/**'
+
+jobs:
+  release:
+    environment:
+      name: b
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check push
+        run: echo pushed
